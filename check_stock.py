@@ -42,7 +42,7 @@ def check():
 if __name__ == "__main__":
     results = check()
     # Temporary test — remove after confirming it works
-requests.post(f"https://ntfy.sh/{NTFY_TOPIC}", data="Test notification from GitHub Actions".encode(), timeout=10)
+    requests.post(f"https://ntfy.sh/{NTFY_TOPIC}", data="Test notification from GitHub Actions".encode(), timeout=10)
     if results:
         msg = "iPhone Duo in stock near Irvine!\n\n" + "\n".join(results)
         print(msg)
